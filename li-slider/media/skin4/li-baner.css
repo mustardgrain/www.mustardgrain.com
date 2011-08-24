@@ -1,0 +1,133 @@
+@charset "utf-8";
+/* 
+	CSS Document
+	Copyright (c) 2010 Spotnil (http://spotnil.com)
+	Version: 0.1 (11/15/2010)
+	
+	Skin 4
+
+	To change any button position or size use the standard CSS rules: width, height, top, bottom, left, right below.
+	The position is relative to the 0,0 point of the banner
+	
+	All the buttons use one background image with three/two different states for the different events of the mouse - Over, Click, Active.
+	Each event visual effect is achieved by changing the background image position.
+
+/* =========================== */	
+/*        General Rules        */	
+/* =========================== */
+
+.li-banner * {
+	margin: 0px;
+	padding: 0px;
+	border: none;
+	}
+
+.li-banner {
+	z-index:100;
+	position: relative;
+	}
+
+.li-banner ul {
+	z-index: -1000;
+	overflow: hidden;
+	width: 100%!important;
+	height: 100%!important;
+	margin: 0px!important;
+	padding: 0px!important;
+	}
+
+.li-banner ul li {
+	display: none;
+	list-style: none!important;
+	margin: 0px!important;
+	padding: 0px!important;
+	}
+
+.li-banner-image-wrap {
+	overflow: hidden;
+	}
+
+.li-banner ul, .li-banner ul li, .li-banner-image-wrap {
+	position: absolute;
+	top: 0px; 
+	left: 0px;
+	}
+
+
+/* =========================== */	
+/* Buttons Sizes and Positions */	
+/* =========================== */	
+
+.nav-btns, .play-btn, .pause-btn { 
+	position: absolute; 
+	background-repeat: no-repeat; 
+	display: block; 
+	cursor: pointer;
+	}
+
+/* --- Previous and Next Buttons --- */
+.prev-btn, .next-btn {
+	width: 21px; 
+	height: 23px; /* if you change the position here change the position for "active" state as well */
+	bottom: 7px; 
+	z-index: 102;
+	} 
+
+
+/* onMouse Over Event  */		
+.prev-btn:hover, .next-btn:hover { 
+	background-position: 0 -23px;
+	}
+	
+/* onMouse Click Event  */		
+.prev-btn:active, .next-btn:active {
+	bottom: 6px;
+	}
+
+.prev-btn:active {
+	left: 9px;
+	}
+
+.next-btn:active {
+	right: 7px;
+	}
+
+/* --- Middle Buttons Settings --- */
+.nav-btns {
+	bottom: 10px;
+	text-align: center;
+	width: 100%;
+	height: 30px;
+	margin: 0px auto;
+	cursor: default;
+	}
+	
+/* Individual button properties */
+.nav-btn {
+	width: 60px;
+	height: 30px;
+	background-image: url(images/button.png);
+	display: inline-block;
+	cursor: pointer;
+	margin: 0px 60px 0px 0px;
+	}
+	
+/* Hack for IE =< 7 for the lack of support for display:inline-block */
+.nav-btns, {
+	bottom: 10px;
+	}
+.nav-btn, {	
+		display:inline;
+		zoom:1
+		}
+
+/* this controls the visual for onMouse Over event  */
+.nav-btns .nav-btn:hover {
+	background-position: 0 -17px;
+	}
+	
+/* this controls the visual for onMouse click event  */
+.nav-btns .nav-btn.current-slide {
+	background-position: 0 -34px;
+	cursor: default;
+	}

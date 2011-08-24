@@ -1,0 +1,181 @@
+@charset "utf-8";
+/* 
+	CSS Document
+	Copyright (c) 2010 Spotnil (http://spotnil.com)
+	Version: 1.0 (11/15/2010)
+	
+	Skin 5
+
+	To change any button position or size use the standard CSS rules: width, height, top, bottom, left, right below.
+	The position is relative to the 0,0 point of the banner
+	
+	All the buttons use one background image with three/two different states for the different events of the mouse - Over, Click, Active.
+	Each event visual effect is achieved by changing the background image position.
+	
+	IMPORTANT! Because of the pure css positioning, it is possible your website css to affect the banner elements.
+	If any of the elements of the banner are not visible or are not at the right position, please first make sure that
+	your website css is not affecting the banner. In most cases it will not.
+	
+	All buttons in liJQuery Slider are DIV elements.
+	
+/* =========================== */	
+/*        General Rules        */	
+/* =========================== */
+
+.li-banner * {
+	margin: 0px;
+	padding: 0px;
+	border: none;
+	}
+
+.li-banner {
+	z-index:100;  /* Change it if the slider overlaps your drop-down navigation or other elements */
+	position: relative;
+	background-color: #fff; /* slider background color */
+	background: url(../images/preloader-squares-blue.gif) no-repeat 376px 201px; /* preloader image - JS hides the preloader automatically*/
+	}
+
+.li-banner ul {
+	z-index: -100;
+	overflow: hidden;
+	width: 100%;
+	height: 100%;
+	}
+
+.li-banner ul li {
+	display: none;
+	list-style: none;
+	}
+
+.li-banner-image-wrap {
+	overflow: hidden;
+	}
+
+.li-banner ul, .li-banner ul li, .li-banner-image-wrap {
+	position: absolute;
+	top: 0px; 
+	left: 0px;
+	}
+
+/* =========================== */	
+/* Buttons Sizes and Positions */	
+/* =========================== */	
+
+.prev-btn, .next-btn, .nav-btns, .play-btn, .pause-btn { 
+	position: absolute; 
+	background-repeat: no-repeat; 
+	display: block; 
+	cursor: pointer;
+	}
+
+/* --- Previous and Next Buttons --- */
+.prev-btn, .next-btn {
+	width: 21px; 
+	height: 21px; /* if you change the position here change the position for "active" state as well */
+	bottom: -25px; 
+	z-index: 102;
+	} 
+
+.prev-btn {	
+	left: 30px; 
+	background-image: url(images/prev-arrow.png);}
+
+.next-btn {	
+	left: 53px; 
+	background-image: url(images/next-arrow.png);}
+
+/* onMouse Over Event  */		
+.prev-btn:hover, .next-btn:hover { 
+	background-position: 0 -21px;
+	}
+	
+/* onMouse Click Event  */		
+.prev-btn:active, .next-btn:active {
+	bottom: -26px;
+	}
+
+.prev-btn:active {
+	left: 31px;
+	}
+
+.next-btn:active {
+	left: 54px;
+	}
+
+
+/* --- Play pause buttons --- */
+.play-btn, .pause-btn {
+	left: 0px; /* if you change the position here change the position for "active" state as well */
+	bottom: -25px;
+	z-index: 101;
+	width: 21px;
+	height: 21px;
+	}
+
+.play-btn { 
+	background-image: url(images/play.png);
+	}
+	
+.pause-btn {
+	background-image: url(images/pause.png);
+	}
+	
+/* this controls the visual for onMouse Over event  */
+.play-btn:hover, .pause-btn:hover {
+	background-position: 0 -21px;
+	}
+	
+/* this controls the visual for onMouse click event  */
+.play-btn:active, .pause-btn:active {
+	left: 1px;
+	bottom: -26px;
+	}
+
+	
+/* --- Middle Buttons Settings --- */
+.nav-btns {
+	bottom: -25px;
+	text-align: left;
+	width: 100%;
+	margin: 0px auto;
+	cursor: default;
+	height: 21px;
+	padding-left: 91px;
+	left: -12px;
+	background-image: url(images/btns-background.png); /* shadow of all buttons below the banner */
+	background-repeat:no-repeat;
+	background-position: 1px 11px;
+	}
+	
+/* Individual button properties */
+.nav-btn {
+	width: 21px;
+	height: 21px;
+	background-image: url(images/button.png);
+	display: inline-block;
+	cursor: pointer;
+	margin: 0px 0px 0px 2px;
+	bottom: 0px;
+	}
+	
+/* Hack for IE7 for the lack of support for display:inline-block */
+.nav-btns, {
+	bottom: -25px;
+	}
+.nav-btn, {	
+		display:inline;
+		zoom:1
+		}
+		
+		
+	
+/* this controls the visual for onMouse Over event  */
+.nav-btns .nav-btn:hover {
+	background-position: 0 -21px;
+	}
+	
+/* this controls the visual for onMouse click event  */
+.nav-btns .nav-btn.current-slide {
+	background-position: 0 -42px;
+	cursor: default;
+	}

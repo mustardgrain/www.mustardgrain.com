@@ -1,0 +1,798 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Help Guide</title>
+<style type="text/css">
+body{
+font-family:Arial, Helvetica, sans-serif;
+background-color:#666;
+text-align:center;		
+}
+a, a:visited{
+color:#06F;
+}
+.container{
+width:900px;
+height:100%;
+color:#000;
+background-color:#FFF;
+padding:50px;
+margin:0 auto;
+text-align:left;
+}
+.section{
+clear:both;
+margin-bottom:35px;
+}
+pre{
+margin:5px;
+overflow:auto;
+padding:10px;
+color:#06F;
+line-height:1.5em;
+background-color:#EEE;
+border:1px solid #666;
+width:700px;
+}
+pre .attr{
+color:#F0F;
+}
+pre .str{
+color:#808;
+}
+pre .num{
+color:#00F;
+}
+pre .bool{
+color:#F00;
+}
+pre .txt{
+color:#000;
+}
+pre .cmt{
+color:#888;
+}
+table{
+border:1px solid #666;
+border-collapse:collapse;
+border-spacing:0;
+margin:5px;
+}
+th{
+background-color:#EEE;
+border:1px solid #666;
+padding: 6px 12px;
+text-align:left;
+vertical-align:top;	
+}
+tr.even td{
+background-color:#F0F5FE
+}
+tr.odd td{
+background-color:#FFF;
+}
+td{
+border:1px solid #666;
+padding: 6px 12px;
+text-align:left;
+vertical-align:top;
+}
+em{
+font-weight:bold;
+}
+h1, h2, h3{
+color:#000;
+margin-top:28px;
+margin-bottom:15px;
+}
+hr{
+color:#CCC;
+background-color:#CCC;
+height:1px;
+border:none;
+}
+.ver{
+font-weight:normal;
+}
+.back-top{
+font-size:12px;
+float:right;
+}
+.tag{
+font-style:italic;
+}
+.file{
+font-style:italic;
+font-weight:bold;
+}
+.param{
+font-weight:bold;
+}
+</style>
+</head>
+<body>
+<div class="container" id="top">
+    <div class="section">
+    	<h1>jQuery List Rotator <span class="ver">(v1.1)</span> - Help Guide</h1>
+        <ul>
+            <li><a href="#overview">Overview</a></li>
+            <li><a href="#usage">Usage</a></li>
+            <li><a href="#content">Adding Content</a></li>
+            <li><a href="#params">Plugin Parameters</a></li>
+            <li><a href="#contact">Contact Info</a></li>
+        </ul>
+    </div>
+    <a name="overview"></a><hr/>
+	<div class="section">
+    	<h2>1. Overview:</h2>
+	    <p>
+    		This is a jQuery list style banner rotator featuring multiple transition effects. 
+	    	The scrollable list allow for easy navigation of your images. 
+    		The banner rotator is also fully re-sizable and configurable through the plugin's parameters and css file.
+	    </p>
+        <p><b>Features:</b></p>
+        <ul>
+        	<li>Multiple transitions available. Also can set a different transition per image.</li>
+            <li>Able to load unlimited number of images, each with customizable text description and hyperlink.</li>
+			<li>Customizable text description transitions available.</li>            
+            <li>Different types of list navigation options available. Can use mouse move, directional buttons mouse over, directional buttons click, or item click.</li>
+            <li>Item list can be aligned left or right.</li>
+            <li>Show or hide components, including play button, thumbnail images, text description, etc.</li>
+            <li>Can set to automatically play on startup with customizable timer delay.  Also can set different time delay per image.</li>
+            <li>Banner screen size and list are all resizable.</li>
+            <li>Text description can be set at different location, size, text color, and background color.</li>
+            <li>Scroll bar indicator shows current list position.</li>            
+            <li>Can set text description and control panel to appear on mouseover.</li>
+            <li>Image random shuffle available.</li>
+        </ul>
+        <a href="#top" class="back-top">back to top</a>
+	</div>
+	<a name="usage"></a><hr/>	
+	<div class="section">
+		<h2>2. Usage:</h2>
+		<p>Installing the rotator requires the following steps.</p>
+    	<ol>
+        	<li>Including the rotator's css file.</li>
+        	<li>Including the javascript files.</li>	        
+    	    <li>Specifying the html tags of the rotator within your page.</li>
+        	<li>Instantiating a javascript function call with any optional parameters.</li>
+	    </ol>
+    	<p>Below describes these steps in more detail.</p>
+        <p>
+            In step 1, to include the rotator's css file <span class="file">list-rotator.css</span>, simply specify the following line of code 
+           	within your <span class="tag">&lt;head&gt;</span> tag:
+        </p>
+<pre>
+&lt;link <span class="attr">rel</span>=<span class="str">"stylesheet"</span> <span class="attr">type</span>=<span class="str">"text/css"</span> <span class="attr">href</span>=<span class="str">"list-rotator.css"</span>/&gt;
+</pre>
+	    <p>
+    		In step 2, you will need to include the jquery's library 
+	    	file <span class="file">jquery-1.5.min.js</span> and the rotator's file
+    		<span class="file">jquery.list-rotator.min.js</span>. 
+    		Both files are located within the <span class="file">js</span> directory. 
+   	 		The code below shows the include in a html page:
+	  	</p>
+<pre>
+&lt;script <span class="attr">type</span>=<span class="str">"text/javascript"</span> <span class="attr">src</span>=<span class="str">"js/jquery-1.5.min.js"</span>&gt;&lt;/script&gt;
+&lt;script <span class="attr">type</span>=<span class="str">"text/javascript"</span> <span class="attr">src</span>=<span class="str">"js/jquery.list-rotator.min.js"</span>&gt;&lt;/script&gt;
+</pre>
+        <p>
+        	<b>note:</b> 
+            The js files with min in its file names are the compressed production version of the file. 
+            If you intend to modify the banner rotator's source code, 
+            you will need to look at the non-min development version of the file and it is recommended that you minify the modified file afterwards.
+      	</p>
+        <p>
+            Additionally, if you plan on using transition easing other than the default "" or "linear", you must include the
+            <span class="file">jquery.easing.1.3.min.js</span> file in your page.
+            Its include can be placed after the <span class="file">jquery-1.5.min.js</span> include but before the
+            <span class="file">jquery.list-rotator.min.js</span> include.
+        </p>
+        <p>
+            In step 3, to specify the tags of the rotator itself, refer to the example in the 
+            <span class="file">index.html</span> file. In that file, you'll see a block of tag starting and ending with:
+        </p>
+<pre>
+&lt;div <span class="attr">class</span>=<span class="str">"container"</span>&gt;
+   &lt;div <span class="attr">class</span>=<span class="str">"l-rotator"</span>&gt;
+      <span class="cmt">&lt;!-- all the tags in between, see index.html for the complete code --&gt;</span>
+   &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+        <p>
+            You can use this as a template and copy and paste it onto your own page, but
+            will have to modify it accordingly with your own image/item information. <a href="#content">Section 3</a> will describe this step in detail.
+        </p>
+        <p>
+            Finally in step 4, you will need to instantiate a javascript function call to get the rotator initialized. 
+            The example code looks like this below:
+        </p>
+<pre>
+&lt;script <span class="attr">type</span>=<span class="str">"text/javascript"</span>&gt;
+<span class="txt">$(document).ready(
+   <span class="key">function</span>() {
+      $(<span class="str">".container"</span>).wtListRotator();
+   }
+);</span>
+&lt;/script&gt;
+</pre>
+        <p>
+            This will instantiate the rotator using the default parameters.
+            <a href="#params">Section 4</a> will describe instantiation with custom parameters.
+        </p>
+        <a href="#top" class="back-top">back to top</a>
+	</div>
+    <a name="content"></a><hr/>
+    <div class="section">
+        <h2>3. Adding Content:</h2>
+        <p>
+            In order to add or change content to the rotator, 
+            you will have to specify a set of tags for each item within the rotator's html tags. 
+            The list of items is represented as a <span class="tag">&lt;ul&gt;</span> tag and 
+            each item is represented by a <span class="tag">&lt;li&gt;</span> tag.
+        </p>
+        <p>
+            Below is an example of what the tags would look like for an item. 
+            You will have to repeat this for as many items as needed for your rotator within the <span class="tag">&lt;ul&gt;</span> tag.
+        </p>
+<pre style="width:875px">
+&lt;li <span class="attr">effect</span>=<span class="str">"fade"</span> <span class="attr">delay</span>=<span class="str">"5000"</span>&gt;
+    &lt;div <span class="attr">class</span>=<span class="str">"thumb"</span>&gt;
+        &lt;img <span class="attr">src</span>=<span class="str">"images/thumbs/mythumb.jpg"</span>/&gt;
+        &lt;p&gt;<span class="txt">Lorem ipsum per augue platonem gubergren at, affert signiferumque in.</span>&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;a <span class="attr">href</span>=<span class="str">"images/myimage.jpg"</span>&gt;&lt;/a&gt;
+    &lt;a <span class="attr">href</span>=<span class="str">"http://codecanyon.net"</span> <span class="attr">target</span>=<span class="str">"_blank"</span>&gt;&lt;/a&gt;                        
+    &lt;div <span class="attr">style</span>=<span class="str">"top:10px; left:25px; width:300px; height:0; color:#000000; background-color:#FFFFFF;"</span>&gt;
+        <span class="txt">Lorem ipsum eos et nonumy delenit, 
+        ea nam petentium suavitate, in utinam torquatos cum. 
+        Tritani facilisi at pro, tation quaeque usu at, 
+        kasd ullum fuisset at nam. No sed decore.</span>
+    &lt;/div&gt;                                       
+&lt;/li&gt;
+</pre>
+        <p>
+            The example above shows that each item entry begins with an opening and closing <span class="tag">&lt;li&gt;</span> tag. 
+            The <span class="tag">&lt;li&gt;</span> tag contain an optional attribute named <span class="param">effect</span> in which an individual effect/transition type 
+            can be assigned for the item.  Refer to the <a href="#transitions">transitions table</a>
+            for a list of available transitions.
+        </p>
+        <p>
+        	<b>note</b>: you can mix different effects except for the h.slide and v.slide effect.
+        </p>
+        <p>
+            Also, there is another optional attribute named <span class="param">delay</span> for the <span class="tag">&lt;li&gt;</span> tag. This is for assigning 
+            an individual timer delay for rotation. The delay time is in milliseconds.
+        </p>
+        <br/>
+       	<p>
+        	Inside the <span class="tag">&lt;li&gt;</span> tag, the first tag is a <span class="tag">&lt;div&gt;</span> tag with <span class="param">class</span> named thumb.
+            This <span class="tag">&lt;div&gt;</span> tag represents the visual components of the list item.
+            The <span class="tag">&lt;img&gt;</span> tag represents the thumbnail image and the <span class="tag">&lt;p&gt;</span> tag represents the item's caption.
+        </p>
+        <br/>
+        <p> 
+            Next, after the <span class="tag">&lt;div&gt;</span> tag, there is an <span class="tag">&lt;a&gt;</span> tag for specifying the banner's image. 
+            The banner's image url can be assigned through the <span class="param">href</span> value.
+        </p>
+        <p>
+            After the first <span class="tag">&lt;a&gt;</span> tag, there is a second optional <span class="tag">&lt;a&gt;</span> tag.
+            This is for specifying the clickable link surrounding the banner when displayed. 
+            You can also specify the <span class="param">target</span> for the link here also. 
+            If you do not want a link associated with a particular banner, you can omit this tag.
+       	</p>
+        <br/>
+        <p>
+            Finally, the last <span class="tag">&lt;div&gt;</span> tag represents the description use for the text box when the item is selected. 	        
+            You can specify html tags and text within this <span class="tag">&lt;div&gt;</span> tag. 
+            If you do not want a description assigned to a particular banner, you can leave the text empty.
+        </p>
+        <p>
+            This <span class="tag">&lt;div&gt;</span> tag also can contains 6 css style attributes (<span class="param">top, left, width, height, color, and background-color</span>).
+            You can specify the left and top position of the text box, 
+            the width and height, and the color and background color with these attributes.
+       	</p>
+        <p>
+            If you want the text box's height to be determined automatically, just set a value of 0.
+            Also, color defaults to white and background color defaults to black if they are not 
+            specified.
+        </p>
+        <a href="#top" class="back-top">back to top</a>
+</div>
+<a name="params"></a><hr/>
+<div class="section">
+	<h2>4. Plugin Parameters:</h2>
+    <p>
+		You can change some common attributes of the rotator through the parameters of the plugin. 
+    	Below is an example of the attributes being specified with corresponding values.
+    </p>
+    <p>
+        <b>note</b>: 
+        if you want to leave a parameter  with its default value, you can omit that parameter in the javascript call.
+    </p>
+<pre>
+&lt;script <span class="attr">type</span>=<span class="str">"text/javascript"</span>&gt;<span class="txt">
+$(document).ready(
+   function() {
+      $(<span class="str">".container"</span>).wtListRotator({
+            screen_width:<span class="num">600</span>,
+            screen_height:<span class="num">300</span>,
+            item_width:<span class="num">250</span>,
+            item_height:<span class="num">75</span>,
+            item_display:<span class="num">4</span>,
+            list_align:<span class="str">"left"</span>,
+            scroll_type:<span class="str">"mouse_move"</span>,
+            auto_start:<span class="bool">true</span>,
+            delay:<span class="num">5000</span>,
+            transition:<span class="str">"fade"</span>,
+            transition_speed:<span class="num">800</span>,
+            easing:<span class="str">""</span>,
+            auto_center:<span class="bool">true</span>,
+            display_playbutton:<span class="bool">true</span>,
+            display_number:<span class="bool">true</span>,
+            display_timer:<span class="bool">true</span>,
+            display_arrow:<span class="bool">true</span>,
+            display_thumbs:<span class="bool">true</span>,
+            display_scrollbar:<span class="bool">true</span>,
+            pause_mouseover:<span class="bool">false</span>,
+            cpanel_mouseover:<span class="bool">false</span>,
+            text_mouseover:<span class="bool">false</span>,
+            text_effect:<span class="str">"fade"</span>,
+            text_sync:<span class="bool">true</span>,
+            cpanel_align:<span class="str">"TR"</span>,
+            timer_align:<span class="str">"bottom"</span>,
+            move_one:<span class="bool">false</span>,
+            auto_adjust:<span class="bool">true</span>,
+            shuffle:<span class="bool">false</span>,
+            play_once:<span class="bool">false</span>,
+            block_size:<span class="num">75</span>,
+            vert_size:<span class="num">50</span>,
+            horz_size:<span class="num">50</span>,
+            block_delay:<span class="num">35</span>,
+            vstripe_delay:<span class="num">90</span>,
+            hstripe_delay:<span class="num">180</span>
+      });
+   }
+);</span>
+&lt;/script&gt;
+</pre>
+        <p>
+            The table below describes each attribute in more detail:
+        </p>  
+        <h3>Parameters Table:</h3>
+        <table border="0" cellpadding="3" cellspacing="3">
+        <tr class="header">
+            <th>Attribute Name</th>
+            <th>Description</th>
+            <th>Default Value</th>
+            <th>Possible Values</th>
+        </tr>
+        <tr class="odd">
+            <td>screen_width</td>
+            <td>The width of the banner screen in pixel.</td>
+            <td>600</td>
+            <td>Any positive number.</td>
+        </tr>
+        <tr class="even">
+            <td>screen_height</td>
+            <td>The height of the banner screen in pixel.</td>
+            <td>300</td>
+            <td>Any positive number.</td>
+        </tr>    
+        <tr class="odd">
+            <td>item_width</td>
+            <td>The width a list item in pixel.</td>
+            <td>250</td>
+            <td>Any positive number.</td>
+        </tr>
+        <tr class="even">
+            <td>item_height</td>
+            <td>The height a list item in pixel.</td>
+            <td>75</td>
+            <td>Any positive number.</td>
+        </tr>  
+        <tr class="odd">
+            <td>item_display</td>
+            <td>The number of items display at a time.</td>
+            <td>4</td>
+            <td>Any positive number.</td>
+        </tr>
+        <tr class="even">
+            <td>list_align</td>
+            <td>The alignment of the item list.</td>
+            <td>"left"</td>
+            <td>"left", "right"</td>
+        </tr>
+        <tr class="odd">
+            <td>scroll_type</td>
+            <td>The scrolling type use for navigating the list.<br/>
+            	<b>note:</b> If you specify "none", navigation of list is done through item click.
+            </td>
+            <td>"mouse_move"</td>
+            <td>"mouse_move", "mouse_over", "mouse_click", "none"</td>
+        </tr>
+        <tr class="even">
+            <td>auto_start</td>
+            <td>Specify if image rotation initially starts.</td>
+            <td>true</td>
+            <td>true, false.</td>
+        </tr>
+        <tr class="odd">
+            <td>delay</td>
+            <td>The global time delay for image rotation in milliseconds. If delay is set per item, it will take precedence over this global delay</td>
+            <td>5000</td>
+            <td>Any positive number.</td>
+        </tr>   
+        <tr class="even">
+            <td>transition</td>
+            <td>The global transition use for images. If transition is set per item, it will take precedence over this global transition.</td>
+            <td>"fade"</td>
+            <td>See the next <a href="#transitions">table</a> for more information 
+            on the available transitions.</td>
+        </tr>   
+        <tr class="odd">
+            <td>transition_speed</td>
+            <td>The transition speed/duration use for image transition in milliseconds.</td>
+            <td>800</td>
+            <td>Any positive number.</td>
+        </tr>
+        <tr class="even">
+            <td>easing</td>
+            <td>The easing used for image transition.<br/>
+            <b>note:</b> To use easing other than "" (none) or "linear", you must include the additional easing file in your page,
+            refer to <a href="#usage">Section 2</a> for information on including this file.</td>
+            <td>""</td>
+           	<td>Please visit <a href="http://gsgd.co.uk/sandbox/jquery/easing/" target="_blank">jQuery Easing Plugin</a> for a list of all available easing.</td>
+        </tr>  
+        <tr class="odd">
+            <td>auto_center</td>
+            <td>If images are automatically centered.</td>
+            <td>true</td>
+            <td>true, false.</td>
+        </tr>   
+        <tr class="even">
+            <td>display_playbutton</td>
+            <td>To specify if the play/pause button is visible.</td>
+            <td>true</td>
+            <td>true, false.</td>
+        </tr>
+        <tr class="odd">
+            <td>display_number</td>
+            <td>To specify if the current image number is visible.</td>
+            <td>true</td>
+            <td>true, false.</td>
+        </tr>
+        <tr class="even">
+            <td>display_timer</td>
+            <td>To specify if the timer indicator bar is visible.</td>
+            <td>true</td>
+            <td>true, false.</td>
+        </tr>   
+      	<tr class="odd">
+            <td>display_arrow</td>
+            <td>To specify if the selected item's arrow is visible.</td>
+            <td>true</td>
+            <td>true, false.</td>
+        </tr>   
+        <tr class="even">
+            <td>display_thumbs</td>
+            <td>To specify if the thumbnail images are visible.</td>
+            <td>true</td>
+            <td>true, false.</td>
+        </tr>
+        <tr class="odd">
+            <td>display_scrollbar</td>
+            <td>To specify if the scroll bar indicator is visible.</td>
+            <td>true</td>
+            <td>true, false.</td>
+        </tr>
+        <tr class="even">
+            <td>pause_mouseover</td>
+            <td>To specify if rotation pauses on mouseover and resumes on mouseout.</td>
+            <td>false</td>
+            <td>true, false.</td>
+        </tr>
+        <tr class="odd">
+            <td>cpanel_mouseover</td>
+            <td>To specify if the control panel appears only on mouseover and hides on mouseout.</td>
+            <td>false</td>
+            <td>true, false.</td>
+        </tr>
+        <tr class="even">
+            <td>text_mouseover</td>
+            <td>To specify if the text box appears only on mouseover and hides on mouseout.</td>
+            <td>false</td>
+            <td>true, false.</td>
+        </tr>   
+        <tr class="odd">
+            <td>text_effect</td>
+            <td>The transition effect used for text box transition.</td>
+            <td>"fade"</td>
+            <td>"none", "fade", "up", "down", "left", "right".</td>
+        </tr>
+        <tr class="even">
+            <td>text_sync</td>
+            <td>If true, text box appears after image transition is completed.<br/>
+            If false, text box appears immediately without synching with image transition.</td>
+            <td>true</td>
+            <td>true, false.</td>
+        </tr>
+        <tr class="odd">
+            <td>cpanel_align</td>
+            <td>The alignment of the control panel.</td>
+            <td>"BR"</td>
+            <td>"TL", "TC", "TR", "BL", "BC", "BR"</td>
+        </tr>
+        <tr class="even">
+            <td>timer_align</td>
+            <td>The alignment of the timer indicator.</td>
+            <td>"bottom"</td>
+            <td>"top", "bottom"</td>
+        </tr>
+        <tr class="odd">
+            <td>move_one</td>
+            <td>Used when scroll_type is "mouse_click" only.<br/>
+            If true, list items move by one unit per click.<br/>
+            If false, list items move by the number set in item_display.</td>
+            <td>false</td>
+            <td>true, false.</td>
+        </tr>         
+        <tr class="even">
+            <td>auto_adjust</td>
+            <td>To specify if items' position are automatically adjusted when image rotates.</td>
+            <td>true</td>
+            <td>true, false.</td>
+        </tr>
+        <tr class="odd">
+            <td>shuffle</td>
+            <td>To specify if items are displayed in random order.</td>
+            <td>false</td>
+            <td>true, false.</td>
+        </tr>
+        <tr class="even">
+            <td>play_once</td>
+            <td>Specify if rotation plays only once through.</td>
+            <td>false</td>
+            <td>true, false.</td>
+        </tr> 
+        <tr class="odd">       	
+            <td>block_size</td>
+            <td>The size of the blocks use for block transitions.</td>
+            <td>75</td>
+            <td>Any positive number.</td>
+        </tr>
+        <tr class="even">
+            <td>vert_size</td>
+            <td>The size of the vertical stripes use for vertical stripe transitions.</td>
+            <td>50</td>
+            <td>Any positive number.</td>
+        </tr>
+        <tr class="odd">
+            <td>horz_size</td>
+            <td>The size of the horizontal stripes use for horizontal stripe transitions.</td>
+            <td>50</td>
+            <td>Any positive number.</td>
+        </tr>
+        <tr class="even">
+            <td>block_delay</td>
+            <td>The delay until the next block transition occurs in sequence. (in milliseconds)</td>
+            <td>35</td>
+            <td>Any positive number.</td>
+        </tr>
+        <tr class="odd">
+            <td>vstripe_delay</td>
+            <td>The delay until the next vertical stripe transition occurs in sequence. (in milliseconds)</td>
+            <td>90</td>
+            <td>Any positive number.</td>
+        </tr>
+        <tr class="even">
+            <td>hstripe_delay</td>
+            <td>The delay until the next horizontal stripe transition occurs in sequence. (in milliseconds)</td>
+            <td>180</td>
+            <td>Any positive number.</td>
+        </tr>
+        </table>
+        <a name="transitions"></a><h3>Transitions Table:</h3>
+        <table border="0" cellpadding="3" cellspacing="3">
+        <tr class="header">
+            <th>Transition Value</th>
+            <th>Description</th>
+            <th>Category</th>
+        </tr>        
+        <tr class="odd">
+            <td>none</td>
+            <td>No transition</td>
+            <td rowspan="5" style="background-color:#FFF">N/A</td>
+        </tr>
+        <tr class="even">
+            <td>fade</td>
+            <td>Fade in transition</td>
+        </tr>
+        <tr class="odd">
+            <td>h.slide</td>
+            <td>Horizontal slide transition</td>
+        </tr>
+        <tr class="even">
+            <td>v.slide</td>
+            <td>Vertical slide transition</td>
+        </tr>
+        <tr class="odd">
+            <td>random</td>
+            <td>Random transition<br/>(random only includes all the transitions listed below)
+          	</td>
+        </tr>
+        <tr class="even">
+            <td>block.top</td>
+            <td>Blocks expand, starting from top.</td>
+            <td rowspan="17" style="background-color:#FFD">Blocks</td>
+        </tr>
+        <tr class="odd">
+            <td>block.bottom</td>
+            <td>Blocks expand, starting from bottom.</td>
+        </tr>
+        <tr class="even">
+            <td>block.left</td>
+            <td>Blocks expand, starting from left.</td>
+        </tr>
+        <tr class="odd">
+            <td>block.right</td>
+            <td>Blocks expand, starting from right.</td>
+        </tr>
+        <tr class="even">
+            <td>diag.fade</td>
+            <td>Blocks fade in, starting diagonally.</td>
+        </tr>
+        <tr class="odd">
+            <td>diag.exp</td>
+            <td>Blocks expand, starting diagonally.</td>
+        </tr>
+        <tr class="even">
+            <td>rev.diag.fade</td>
+            <td>Blocks fade in, reverse diagonally.</td>
+        </tr>
+        <tr class="odd">
+            <td>rev.diag.exp</td>
+            <td>Blocks expand, reverse diagonally.</td>
+        </tr>
+        <tr class="even">
+            <td>block.fade</td>
+            <td>Blocks fade in at random speed.</td>
+        </tr>
+        <tr class="odd">
+            <td>block.exp</td>
+            <td>Blocks expand at random speed.</td>
+        </tr>
+         <tr class="even">
+            <td>block.drop</td>
+            <td>Blocks fall at random speed.</td>
+        </tr>        
+        <tr class="odd">
+            <td>block.top.zz</td>
+            <td>Blocks fade in, start from top and zig zag down.</td>
+        </tr>
+        <tr class="even">
+            <td>block.bottom.zz</td>
+            <td>Blocks fade in, start from bottom and zig zag top.</td>
+        </tr>
+        <tr class="odd">
+            <td>block.left.zz</td>
+            <td>Blocks fade in, start from left and zig zag right.</td>
+        </tr>
+        <tr class="even">
+            <td>block.right.zz</td>
+            <td>Blocks fade in, start from right and zig zag left.</td>
+        </tr>
+        <tr class="odd">
+            <td>spiral.in</td>
+            <td>Blocks fade in, spiraling in.</td>
+        </tr>
+        <tr class="even">
+            <td>spiral.out</td>
+            <td>Blocks fade out, spiraling out.</td>
+        </tr>
+        <tr class="odd">
+            <td>vert.random.fade</td>
+            <td>Vertical stripe fade in at random.</td>
+            <td rowspan="11" style="background-color:#FFF">Vertical Stripe</td>
+        </tr>        	
+        <tr class="even">
+            <td>vert.tl</td>
+            <td>Vertical stripe transition starting top left.</td>
+        </tr>
+        <tr class="odd">
+            <td>vert.tr</td>
+            <td>Vertical stripe transition starting top right.</td>
+        </tr>
+        <tr class="even">
+            <td>vert.bl</td>
+            <td>Vertical stripe transition starting bottom left.</td>
+        </tr>
+        <tr class="odd">
+            <td>vert.br</td>
+            <td>Vertical stripe transition starting bottom right.</td>
+        </tr>
+        <tr class="even">
+            <td>fade.left</td>
+            <td>Vertical stripe transition fade starting from left.</td>
+        </tr>
+        <tr class="odd">
+            <td>fade.right</td>
+            <td>Vertical stripe transition fade starting from right.</td>
+        </tr>
+        <tr class="even">
+            <td>alt.left</td>
+            <td>Alternating vertical stripe transition starting from left.</td>
+        </tr>
+        <tr class="odd">
+            <td>alt.right</td>
+            <td>Alternating vertical stripe transition starting from right.</td>
+        </tr>
+        <tr class="even">
+            <td>blinds.left</td>
+            <td>Vertical blinds transition starting from left.</td>
+        </tr>
+        <tr class="odd">
+            <td>blinds.right</td>
+            <td>Vertical blinds transition starting from right.</td>
+        </tr>
+        <tr class="even">
+            <td>horz.random.fade</td>
+            <td>Horizontal stripe fade in at random.</td>
+            <td rowspan="11" style="background-color:#FFD">Horizontal Stripe</td>
+        </tr>
+         <tr class="odd">
+            <td>horz.tl</td>
+            <td>Horizontal stripe transition starting top left.</td>
+        </tr>
+        <tr class="even">
+            <td>horz.tr</td>
+            <td>Horizontal stripe transition starting top right.</td>
+        </tr>
+        <tr class="odd">
+            <td>horz.bl</td>
+            <td>Horizontal stripe transition starting bottom left.</td>
+        </tr>
+        <tr class="even">
+            <td>horz.br</td>
+            <td>Horizontal stripe transition starting bottom right.</td>
+        </tr>
+        <tr class="odd">
+            <td>fade.top</td>
+            <td>Horizontal stripe transition fade starting from top.</td>
+        </tr>
+        <tr class="even">
+            <td>fade.bottom</td>
+            <td>Horizontal stripe transition fade starting from bottom.</td>
+        </tr>
+        <tr class="odd">
+            <td>alt.top</td>
+            <td>Alternating horizontal stripe transition starting from top.</td>
+        </tr>        
+        <tr class="even">
+            <td>alt.bottom</td>
+            <td>Alternating horizontal stripe transition starting from bottom.</td>
+        </tr>        
+        <tr class="odd">
+            <td>blinds.top</td>
+            <td>Horizontal blinds transition starting from top.</td>
+        </tr>          
+        <tr class="even">
+            <td>blinds.bottom</td>
+            <td>Horizontal blinds transition starting from bottom.</td>
+        </tr>
+        </table>
+        <a href="#top" class="back-top">back to top</a>
+	</div>   
+    <a name="contact"></a><hr/>
+    <div class="section">
+        <h2>Contact Information:</h2>
+        <p>
+            For help or questions regarding this file, email me at 
+            <a href="mailto:webtako@gmail.com">webtako@gmail.com</a>.
+        </p>
+        <a href="#top" class="back-top">back to top</a>
+    </div>
+</div>
+</body>
+</html>
