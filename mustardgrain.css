@@ -43,9 +43,9 @@ body {
 	}
 
 #container-contact {
-	background:url(images/splash-contact.jpg);
+        background: #ffffff;
 	width: 980px;
-	height:313px;
+	height:150px;
 	position: relative;
 	margin-top: 24px;
 	margin-right: auto;
