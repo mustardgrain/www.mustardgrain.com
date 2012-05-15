@@ -53,6 +53,39 @@ body {
 	margin-left: auto;
 	}
 
+#container-services1 {
+        background: #ffffff;
+        width: 980px;
+        height:315px;;
+        position: relative;
+        margin-top: 24px;
+        margin-right: auto;
+        margin-bottom: 34px;
+        margin-left: auto;
+        }
+
+#container-services2 {
+        background: #ffffff;
+        width: 980px;
+        height:300px;;
+        position: relative;
+        margin-top: 24px;
+        margin-right: auto;
+        margin-bottom: 34px;
+        margin-left: auto;
+        }
+
+#container-services3 {
+        background: #ffffff;
+        width: 980px;
+        height:300px;;
+        position: relative;
+        margin-top: 24px;
+        margin-right: auto;
+        margin-bottom: 34px;
+        margin-left: auto;
+        }
+
 #container-about1 {
 	background:url(images/about-bg1.jpg);
 	width: 980px;
