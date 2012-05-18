@@ -149,8 +149,9 @@ a:hover {
 	background:url(images/footer.png);
 	width: 980px;
 	height:54px;
+        line-height: 3.35em;
 	text-align: center;
-	font-size: 1.1em;
+	font-size: 1.2em;
 	clear: both;
 	position: relative;
 	margin-top: 0px;
