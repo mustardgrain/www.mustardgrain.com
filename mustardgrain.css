@@ -87,7 +87,7 @@ body {
         }
 
 #container-about1 {
-	background:url(images/about-bg1.jpg);
+        background: #ffffff;
 	width: 980px;
 	height:185px;;
 	position: relative;
@@ -98,7 +98,7 @@ body {
 	}
 
 #container-about2 {
-	background:url(images/about-bg2.jpg);
+        background: #ffffff;
 	width: 980px;
 	height:540px;;
 	position: relative;
