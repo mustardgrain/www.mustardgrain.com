@@ -172,6 +172,10 @@ a:focus {
     font-size: 28px;
 }
 
+.logo_img {
+    width: 75%;
+}
+
 @media(min-width:768px) {
     .intro {
         height: 100%;
